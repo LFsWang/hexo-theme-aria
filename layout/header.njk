@@ -1,4 +1,7 @@
 {% block header %}
+{% if theme.mathjax.cdn and theme.mathjax.enable %}
+{% include "mathjaxpredefine.njk" %}
+{% endif %}
 <header id="header" class="header"{% if theme.color %} style="background: {{ theme.color }};"{% endif %}>
   <div class="container">
     <div class="header-container">
